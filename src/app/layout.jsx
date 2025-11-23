@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-    title: "AnimeV2",
-    description: "An anime streaming website",
+    title: "LazarusNime",
+    description: "Stream Anime Gratis dan Cepat",
 };
 
 export default function RootLayout({ children }) {
