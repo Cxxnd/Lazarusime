@@ -1,11 +1,8 @@
 import "../components/css/style.css";
 const NotFound = () => {
-    };
     return (
         <div>
-            <h2>
-                Page Not Found{" "}
-            </h2>
+            <h2>Page Not Found </h2>
 
             <svg
                 id="svgWrap_2"
