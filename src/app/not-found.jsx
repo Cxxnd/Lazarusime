@@ -1,13 +1,10 @@
-import Link from "next/link";
 import "../components/css/style.css";
 const NotFound = () => {
+    };
     return (
         <div>
             <h2>
                 Page Not Found{" "}
-                <Link href="/" className="return-home">
-                    Return Home?
-                </Link>
             </h2>
 
             <svg
