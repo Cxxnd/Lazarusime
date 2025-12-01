@@ -4,7 +4,7 @@ import { getAnime } from "@/libs/service-api";
 import Link from "next/link";
 
 const Page = async ({ params }) => {
-    const { slug } = params;
+    const { slug } = await params;
     const res = await getAnime({ resource: `batch/${slug}` });
     const data = res?.data || res || {};
     if (!data || !data.poster) {

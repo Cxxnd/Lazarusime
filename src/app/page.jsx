@@ -1,17 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getAnime } from "@/libs/service-api";
+// import ScheduleCarousel from "@/components/Utilities/Carousel";
 
 const Page = async () => {
     const animeHome = await getAnime({ resource: "home" });
+    // const carousel = await getAnime({ resource: "schedule" });
 
     const ongoingAnime = animeHome?.data?.ongoing_anime || [];
     const completeAnime = animeHome?.data?.complete_anime || [];
+    // const carouselData = carousel?.data || {};
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 px-6 py-10 text-white">
             {/* Header */}
             <div className="text-center mb-12">
+                {/* <ScheduleCarousel data={carouselData} /> */}
                 <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 drop-shadow-md">
                     LAZARUSNIME
                 </h1>
@@ -58,10 +62,16 @@ const Page = async () => {
                     ))}
                 </div>
             </section>
-            <div className="flex items-center justify-center mt-4 mb-12 sm:mb-6">
+            <div className="flex flex-row justify-center items-center mt-4 mb-12 sm:mb-6 gap-2">
+                <Link
+                    href="/animeFull"
+                    className="text-sm hover:text-purple-300 transition-colors duration-300 bg-blue-600 px-2 py-1 rounded-md"
+                >
+                    Anime Full List
+                </Link>
                 <Link
                     href="/genre"
-                    className="text-sm hover:text-purple-300 transition-colors duration-300 bg-blue-600 px-3 py-1 rounded-md"
+                    className="text-sm hover:text-purple-300 transition-colors duration-300 bg-blue-600 px-2 py-1 rounded-md"
                 >
                     Lihat Genre
                 </Link>

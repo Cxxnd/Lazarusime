@@ -1,9 +1,42 @@
 import Image from "next/image";
+import ButtonBack from "@/components/Navbar/ButtonBack";
 import Link from "next/link";
 import { Star } from "lucide-react";
 
-const AnimeList = ({ api }) => {
+const AnimeList = ({ api, mode }) => {
     const animeData = api?.data?.anime || api?.data || api || [];
+
+    if (mode === "az") {
+        return (
+            <div className="space-y-10">
+                <ButtonBack />
+                {animeData.map((group, groupIndex) => (
+                    <div key={groupIndex}>
+                        <h2 className="text-2xl font-bold mb-4">
+                            {group.startWith}
+                        </h2>
+
+                        <div className="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+                            {group.animeList.map((anime, index) => (
+                                <Link
+                                    key={index}
+                                    href={anime.href}
+                                    className="block rounded-lg bg-gray-900 hover:bg-gray-800 transition p-3"
+                                >
+                                    <p className="text-sm font-semibold line-clamp-2">
+                                        {anime.title}
+                                    </p>
+                                    <span className="text-xs text-gray-400">
+                                        {anime.animeId}
+                                    </span>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        );
+    }
 
     return (
         <div className="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
