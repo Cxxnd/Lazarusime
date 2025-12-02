@@ -70,14 +70,14 @@ export default function VideoPlayer({ streamServers }) {
             {/* VIDEO */}
             <div className="w-full aspect-video rounded-lg overflow-hidden">
                 {streamUrl ? (
-                    <video
+                    <iframe
                         ref={iframeRef}
                         src={streamUrl}
                         frameBorder="0"
                         allow="fullscreen"
                         allowFullScreen
                         className="w-full h-full object-cover"
-                    ></video>
+                    ></iframe>
                 ) : (
                     <div className="text-white flex justify-center items-center h-full">
                         Loading...
