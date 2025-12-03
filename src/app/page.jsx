@@ -64,6 +64,12 @@ const Page = async () => {
             </section>
             <div className="flex flex-row justify-center items-center mt-4 mb-12 sm:mb-6 gap-2">
                 <Link
+                    href="/ongoinganime"
+                    className="text-sm hover:text-purple-300 transition-colors duration-300 bg-blue-600 px-2 py-1 rounded-md"
+                >
+                    Ongoing Anime
+                </Link>
+                <Link
                     href="/animeFull"
                     className="text-sm hover:text-purple-300 transition-colors duration-300 bg-blue-600 px-2 py-1 rounded-md"
                 >
