@@ -18,18 +18,20 @@ const AnimeList = ({ api, mode }) => {
 
                         <div className="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
                             {group.animeList.map((anime, index) => (
-                                <Link
-                                    key={index}
-                                    href={anime.href}
-                                    className="block rounded-lg bg-gray-900 hover:bg-gray-800 transition p-3"
-                                >
-                                    <p className="text-sm font-semibold line-clamp-2">
-                                        {anime.title}
-                                    </p>
-                                    <span className="text-xs text-gray-400">
-                                        {anime.animeId}
-                                    </span>
-                                </Link>
+                                <div className="anime-reveal">
+                                    <Link
+                                        key={index}
+                                        href={anime.href}
+                                        className="block rounded-lg bg-gray-900 hover:bg-gray-800 transition p-3"
+                                    >
+                                        <p className="text-sm font-semibold line-clamp-2">
+                                            {anime.title}
+                                        </p>
+                                        <span className="text-xs text-gray-400">
+                                            {anime.animeId}
+                                        </span>
+                                    </Link>
+                                </div>
                             ))}
                         </div>
                     </div>
@@ -80,14 +82,19 @@ const AnimeList = ({ api, mode }) => {
                         <div className="mt-2 text-xs text-gray-400 space-y-1">
                             <p>
                                 <span className="text-blue-400">
-                                    {anime.season}
+                                    {anime.season || anime.release_day || "-"}
                                 </span>{" "}
-                                • {anime.studio || "-"}
+                                •{" "}
+                                {anime.studio ||
+                                    anime.newest_release_date ||
+                                    "-"}
                             </p>
                             <p>
                                 Ep:{" "}
                                 <span className="text-gray-300 font-medium">
-                                    {anime.episode_count || "?"}
+                                    {anime.episode_count ||
+                                        anime.current_episode ||
+                                        "?"}
                                 </span>
                             </p>
                             {/* Genre 3 pertama */}

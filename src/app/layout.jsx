@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
+import SmoothScroll from "@/components/Utilities/SmoothScroll";
+import ScrollReveal from "@/components/Utilities/ScrollReveal";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -23,12 +25,15 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                className={`${geistSans.variable} ${geistMono.variable} antialiased text-white bg-black min-h-screen`}
             >
                 <Navbar />
                 <Analytics />
                 <SpeedInsights />
-                {children}
+                <SmoothScroll>
+                    <ScrollReveal />
+                    {children}
+                </SmoothScroll>
             </body>
         </html>
     );
