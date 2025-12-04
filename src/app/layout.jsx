@@ -30,10 +30,7 @@ export default function RootLayout({ children }) {
                 <Navbar />
                 <Analytics />
                 <SpeedInsights />
-                <SmoothScroll>
-                    <ScrollReveal />
-                    {children}
-                </SmoothScroll>
+                <SmoothScroll>{children}</SmoothScroll>
             </body>
         </html>
     );

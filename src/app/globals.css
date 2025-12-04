@@ -56,16 +56,3 @@ body {
         transform: translateX(150%);
     }
 }
-
-/* Anime card reveal */
-.anime-reveal {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: all 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-    will-change: transform, opacity;
-}
-
-.anime-reveal.show {
-    opacity: 1;
-    transform: translateY(0);
-}
