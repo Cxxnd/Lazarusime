@@ -7,7 +7,7 @@
 // VERSION PAGES ROUTER DENGAN useRouter (client) UNTUK ARAHKAN USER
 // File: pages/maintenance.js
 
-export default function MaintenancePage() {
+export default function maintenence() {
     return (
         <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 p-6">
             <div className="max-w-3xl w-full text-center bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-8">
