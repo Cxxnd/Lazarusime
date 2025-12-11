@@ -14,10 +14,6 @@ export default function MaintenancePage() {
                 <h1 className="text-3xl sm:text-4xl font-semibold mb-4">
                     Website ini sedang diperbaiki
                 </h1>
-                <p className="text-gray-600 mb-6">
-                    Kami akan mengarahkan kamu otomatis ke beranda dalam 5
-                    detik...
-                </p>
             </div>
         </main>
     );
