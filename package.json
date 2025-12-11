@@ -24,6 +24,8 @@
   "devDependencies": {
     "@biomejs/biome": "2.2.0",
     "@tailwindcss/postcss": "^4",
+    "dotenv": "^17.2.3",
+    "prisma": "^7.1.0",
     "tailwindcss": "^4"
   }
 }
