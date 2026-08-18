@@ -18,7 +18,7 @@ const Page = async () => {
                 <p className="text-gray-400 mt-2">
                     Tonton anime favoritmu dengan tampilan elegan dan cepat 🚀
                 </p>
-                <p className="text-cyan-800">Website Create by Faza</p>
+                <p className="text-cyan-800">Website Create by Faza. Credit: Otakudesu</p>
             </div>
 
             {/* Ongoing Anime */}
